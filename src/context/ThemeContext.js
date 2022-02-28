@@ -27,7 +27,7 @@ export default function ThemeProvider({ children }) {
           primary: "#c45a5a",
           link: "#46cdf3",
           foreground: "#fff",
-          background: "#F5F5F5",
+          background: "#f2f2f2",
           caption: "#636366",
           text: "#0f0f0f",
         }

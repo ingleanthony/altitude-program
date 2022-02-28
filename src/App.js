@@ -51,51 +51,52 @@ function App() {
       <header>
         <h1>Rocket Calculator</h1>
       </header>
-      <h2>Density</h2>
-      <p className="caption">
-        Based on the{" "}
-        <a
-          href="https://www.grc.nasa.gov/www/k-12/airplane/atmosmet.html"
-          target="_blank"
-          rel="noreferrer"
-        >
-          NASA Earth Atmosphere Model
-        </a>
-      </p>
-      <br />
-      {/* <div>
+      <main>
+        <h2>Density</h2>
+        <p className="caption">
+          Based on the{" "}
+          <a
+            href="https://www.grc.nasa.gov/www/k-12/airplane/atmosmet.html"
+            target="_blank"
+            rel="noreferrer"
+          >
+            NASA Earth Atmosphere Model
+          </a>
+        </p>
+        <br />
+        {/* <div>
         <label>Weight (kg)</label>
         <input name="weight" onChange={onChange} value={values.weight} />
       </div> */}
-      <div>
-        <label>Altitude (m)</label>
-        <input name="altitude" onChange={onChange} value={values.altitude} />
-      </div>
-      {/* <div>
+        <div>
+          <label>Altitude (m)</label>
+          <input name="altitude" onChange={onChange} value={values.altitude} />
+        </div>
+        {/* <div>
         <label>Characteristic Surface Area</label>
         <input name="area" onChange={onChange} value={values.area} />
       </div> */}
-      <h3>Results</h3>
-      <div>
-        <label>Temperature (ºC)</label>
-        <input
-          name="temperature"
-          onChange={onChange}
-          value={values.temperature}
-        />
-      </div>
-      <div>
-        <label>Pressure (K-PA)</label>
-        <input name="pressure" onChange={onChange} value={values.pressure} />
-      </div>
-      <div>
-        <label>
-          Density (kg/m<sup>3</sup>)
-        </label>
-        <input name="density" onChange={onChange} value={values.density} />
-      </div>
+        <h3>Results</h3>
+        <div>
+          <label>Temperature (ºC)</label>
+          <input
+            name="temperature"
+            onChange={onChange}
+            value={values.temperature}
+          />
+        </div>
+        <div>
+          <label>Pressure (K-PA)</label>
+          <input name="pressure" onChange={onChange} value={values.pressure} />
+        </div>
+        <div>
+          <label>
+            Density (kg/m<sup>3</sup>)
+          </label>
+          <input name="density" onChange={onChange} value={values.density} />
+        </div>
 
-      <style>{`
+        <style>{`
         body,
         html {
           background: ${colors.background};
@@ -116,6 +117,7 @@ function App() {
           color: ${colors.link}
         }
       `}</style>
+      </main>
       <Footer />
     </div>
   );
