@@ -41,7 +41,6 @@ function App() {
       pressure = 2.488 * Math.pow((temperature + 273.1) / 216.6, -11.388);
     }
     density = pressure / (0.2869 * (temperature + 273.1));
-    console.log(altitude, temperature, pressure, density);
     setValues({ ...values, temperature, pressure, density });
   };
 
@@ -97,7 +96,6 @@ function App() {
           background-color: ${colors.foreground};
           color: ${colors.text};
         }
-
         h1 {
           color: ${colors.primary};
         }

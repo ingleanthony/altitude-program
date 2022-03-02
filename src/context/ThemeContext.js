@@ -3,6 +3,7 @@ import React, {
   useState,
   useLayoutEffect,
   useContext,
+  useEffect,
 } from "react";
 
 const ThemeContext = createContext();
@@ -12,13 +13,21 @@ export default function ThemeProvider({ children }) {
 
   // Checks system theme before loading page to assign appropriate theme
   useLayoutEffect(() => {
-    const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-    if (darkThemeMq.matches) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
+    // check if theme is in local storage
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) setTheme(storedTheme);
+    else {
+      // otherwise set theme on system preference
+      const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+      if (darkThemeMq.matches) setTheme("dark");
+      else setTheme("light");
     }
   }, []);
+
+  // set local storage when theme changes
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const colors =
     theme === "light"
